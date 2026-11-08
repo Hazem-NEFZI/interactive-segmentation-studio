@@ -1,0 +1,12 @@
+{
+  "backend": "grabcut",
+  "sample": "synthetic",
+  "area_pixels": 46709,
+  "bbox_xyxy": [
+    111,
+    96,
+    464,
+    277
+  ],
+  "perimeter_pixels": 899.98
+}
