@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "interactive-segmentation-studio"
+version = "2.0.0"
+description = "Box-prompted segmentation, binary-mask measurements, lossless annotation export, and optional SAM 2.1 integration."
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [{name = "Hazem Nefzi"}]
+dependencies = ["numpy>=1.26,<3", "opencv-contrib-python-headless>=4.10,<5", "pillow>=10,<14", "matplotlib>=3.8,<4", "scipy>=1.11,<2"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8,<10", "ruff>=0.11,<1"]
+app = ["streamlit>=1.40,<2", "pillow>=10,<14"]
+
+[tool.setuptools.packages.find]
+include = ["segstudio*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+
+[tool.ruff]
+line-length = 88
+
+[tool.ruff.lint]
+select = ["F"]
